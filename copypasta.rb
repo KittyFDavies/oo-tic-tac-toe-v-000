@@ -1,11 +1,3 @@
-#PLAY
-def play
-  while over? == false
-    turn
-  end
-  if won?
-    puts "Congratulations #{winner}!"
-  elsif draw?
-    puts "Cat's Game!"
-  end
+def current_player
+  turn_count % 2 == 0 ? "X" : "O"
 end
