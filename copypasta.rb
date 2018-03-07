@@ -1,7 +1,7 @@
 #PLAY
 def play
   while over? == false
-    input = turn
+    turn
   end
   if won?
     puts "Congratulations #{winner}!"
