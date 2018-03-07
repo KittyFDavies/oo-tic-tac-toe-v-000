@@ -117,7 +117,7 @@ class TicTacToe
 
   #PLAY
   def play
-    while over? = false
+    while over? == false
       turn
     end
     if won?
@@ -126,4 +126,5 @@ class TicTacToe
       puts "Cat's Game!"
     end
   end
+
 end
