@@ -83,7 +83,7 @@ class TicTacToe
     else
       "X"
     end
-end
+  end
 
   # did someone win?
   def won?
