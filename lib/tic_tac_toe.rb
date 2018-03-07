@@ -84,7 +84,7 @@ class TicTacToe
   def won?
     WIN_COMBINATIONS.detect do |win_combination|
       if win_combination[0] == win_combination[1] && win_combination[0] == win_combination[2]
-        if position_taken?(win_combination[0]) == true
+        if position_taken?(index) == true
           return win_combination
         end
       end
