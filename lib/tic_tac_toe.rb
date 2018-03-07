@@ -83,17 +83,6 @@ class TicTacToe
   # did someone win?
   def won?
     WIN_COMBINATIONS.detect do |win_combination|
-      if win_combination[0] == win_combination[1] && win_combination[0] == win_combination[2]
-        if position_taken?(index) == true
-          return win_combination
-        end
-      end
-    end
-  end
-
-
-  def won?
-    WIN_COMBINATIONS.detect do |win_combination|
       if @board[win_combination[0]] == @board[win_combination[1]] && @board[win_combination[0]] == @board[win_combination[2]]
         if position_taken?(win_combination[0]) == true
           return win_combination
@@ -101,7 +90,6 @@ class TicTacToe
       end
     end
   end
-  
 
   # is the board full?
   def full?
