@@ -72,17 +72,12 @@ class TicTacToe
 
   #TURN_COUNT
   def turn_count
-    turns = @board.count("X") + @board.count("O")
+    @board.count{|token| token == "X" || token == "O"}
   end
 
   #CURRENT_PLAYER
   def current_player
-    "X"
-    if turn_count.odd?
-      "O"
-    else
-      "X"
-    end
+    turn_count % 2 == 0 ? "X" : "O"
   end
 
   # did someone win?
